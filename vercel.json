@@ -1,0 +1,9 @@
+{
+    "builds": [
+      {
+        "source": "/(.*)",
+       "destination":"index.html"
+      }
+    ],
+    "rootDirectory": "Client"
+  }
