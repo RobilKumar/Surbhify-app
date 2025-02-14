@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "Client/package.json",
+      "src": "Client/package.json",  
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist"
