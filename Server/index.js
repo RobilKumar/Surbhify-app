@@ -15,7 +15,14 @@ dotenv.config(); // Load .env file
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+
+// Allow specific origin
+const corsOptions = {
+  origin: 'https://client-psi-murex.vercel.app', // Add your front-end URL here
+  credentials: true
+};
+app.use(cors(corsOptions));
 
 app.use("/api/users", userRoute);
 app.use("/api/chats", chatRoute);
@@ -47,7 +54,7 @@ app.get("/", (req, res) => {
 
 //  Here it is Socket server
 const io = new Server(expressServer, { cors:{ 
-   origin: process.env.CLIENT_URL
+   origin:" https://client-psi-murex.vercel.app/",
     }});
 
 
