@@ -54,7 +54,7 @@ app.get("/", (req, res) => {
 
 //  Here it is Socket server
 const io = new Server(expressServer, { cors:{ 
-   origin:" https://client-psi-murex.vercel.app/",
+   origin:" https://client-psi-murex.vercel.app",
     }});
 
 
